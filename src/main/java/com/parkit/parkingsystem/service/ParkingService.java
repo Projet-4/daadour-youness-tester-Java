@@ -112,7 +112,7 @@ public class ParkingService {
             ticket.setOutTime(outTime);
 
             int ticketsCount = ticketDAO.getNbTicket(vehicleRegNumber);
-            if (ticketsCount > 0){
+            if (ticketsCount > 1){
                 fareCalculatorService.calculateFare(ticket, true);
             }else {
                 fareCalculatorService.calculateFare(ticket);
